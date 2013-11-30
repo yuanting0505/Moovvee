@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GreenBean::Application.config.secret_key_base = '7dea561aaadd0d5b877ea6401cb01151a1a244536acf761571735f2edc410800d6322f490a31bfeb70dc9699f2103bb4641f66a7998a4936889469554b4bc222'
+Moovvee::Application.config.secret_key_base = '7dea561aaadd0d5b877ea6401cb01151a1a244536acf761571735f2edc410800d6322f490a31bfeb70dc9699f2103bb4641f66a7998a4936889469554b4bc222'

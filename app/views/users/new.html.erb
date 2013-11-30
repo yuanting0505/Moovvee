@@ -1,0 +1,19 @@
+<div id="signup_page">
+	<%= form_for(@user) do |f| %>
+		<%= render 'shared/error_messages' %>
+		<%= f.label :email,'邮箱:' %>
+		<%= f.email_field :email,placeholder:"请输入您的邮箱"%>
+
+		<%= f.label :name,'名号:' %>
+		<%= f.text_field :name,placeholder:"请输入您的名号"%>
+
+		<%= f.label :password,'密码:' %>
+		<%= f.password_field :password,placeholder:"请输入密码" %>
+
+		<%= f.label :password_confirmation,'确认密码:' %>
+		<%= f.password_field :password_confirmation,placeholder:"请再次输入密码" %>
+
+		<%= f.submit "注册", class: "btn btn-lg btn-primary " %>
+
+	<% end %>
+</div>

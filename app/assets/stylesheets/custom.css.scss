@@ -1,0 +1,81 @@
+body{
+	font-family: "Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti;
+}
+header{
+	background-image: url("header_bg.png");
+	background-repeat: repeat-x repeat-y;
+	height:50px;
+	nav{
+		float:right;
+		margin-right: 30px;
+	}
+}
+
+nav#header_nav>ul{
+	margin-top: 20px;
+	li{
+		display: inline;
+		list-style-type: none;
+		margin-left:20px;
+    	font-size:15px;
+    	font-weight: bold;
+    	a{
+			color:#33CC99;
+			text-decoration: none;
+    		&:hover{
+    			color:#009966;
+    		}
+   	  }
+	}
+}
+
+img#logo{
+	width:100px;
+}
+
+header>a{
+	margin-left: 40px;
+}
+
+form#new_user{
+	background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.333);
+    margin: auto;
+    padding: 2.5em;
+    width: 19em;
+    label{
+    	font-size:16px;
+    }
+    input{
+    	font-size:16px;
+    	padding-left:5%;
+    	padding-right: 5%;
+    	padding-top:10px;
+    	padding-bottom:10px;
+    	width:90%;
+    }
+    input.btn{
+    	width:100%;
+    	background:#33CC99;
+    	border-color:#33DD99;
+    }
+
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+div#signup_page{
+	height:100vh;
+	background-color: #3F4652; 
+	background-image: url('bg.png');
+	padding-top:100px;
+	padding-bottom: 100px;
+}
+

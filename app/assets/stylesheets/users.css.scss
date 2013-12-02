@@ -1,3 +1,15 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a#to_signin{
+	color:#33CC99;
+	&:hover{
+	 color:#00cc66;
+	}
+}
+
+form#new_user>label#to_signin_label{
+	float:right;
+	font-size:14px;
+	margin-top:5px;
+}

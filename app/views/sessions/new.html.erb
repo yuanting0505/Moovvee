@@ -1,0 +1,19 @@
+<%= provide(:title,"登陆") %>
+<div id="signin_page">
+	<%= form_for :session, :url=>sessions_path, :html=>{:id=>"signin_form"} do |f| %>
+       <% flash.each do |key,value| %>
+	        <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+		<%= f.label :email,'邮箱:' %>
+		<%= f.email_field :email,placeholder:"请输入您的邮箱"%>
+
+
+		<%= f.label :password,'密码:' %>
+		<%= f.password_field :password,placeholder:"请输入密码" %>
+        
+        <%= f.check_box :remember,:id=>"remember_checkbox" %>
+        <%= f.label :remember,"记住密码",:id=>'remember_label' %>
+
+		<%= f.submit "登陆", class: "btn btn-lg btn-primary " %>
+	<% end %>
+</div>

@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class UsersController < ApplicationController
 
 	def new
@@ -7,9 +9,11 @@ class UsersController < ApplicationController
 	def create
 		@user=User.new(user_params)
 		if @user.save
-			redirect_to "http://www.baidu.com"
+			sign_in @user
+			flash[:success]="欢迎来到Moovvee!"
+			redirect_to @user
 		else
-			render 'new.html.erb'
+			render 'new'
 		end
 	end
 

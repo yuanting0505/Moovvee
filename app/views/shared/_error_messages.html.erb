@@ -6,7 +6,9 @@
 		<ul>
 			<% @user.errors.full_messages.each do |msg| %>
 			<li>
-				*<%= msg %>
+				<div class="alert alert-error">
+					<%= msg %>
+				</div>
 			</li>
 			<% end %>
 		</ul>

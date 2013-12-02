@@ -1,9 +1,21 @@
 <header class="navbar navbar-default navbar-fixed-top">
 	<%= link_to image_tag("logo.png",alt:"Moovvee",id:"logo"),'#'%>
 	<nav id="header_nav">
-		<ul>
-			<li><a>Home</a></li>
-			<li><a>Users</a></li>
+		<ul id="nav">
+			<li class='fl-li'><%= link_to "主页",root_path %></li>
+			<% if signed_in? %>
+				 <li id="fat-menu" class="dropdown fl-li">
+				 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">账号<b class="caret"></b>
+				 	</a>
+				 	<ul class="dropdown-menu pull-right" id="header_dropdown">
+					 	<li><%= link_to "个人信息",current_user %></li>
+					 	<li><%= link_to "退出", signout_path, method:"delete"%></li>
+				    </ul>
+				 </li>
+			<% else %>
+				<li class='fl-li'><%= link_to "登陆",signin_path %></li>
+				<li class='fl-li'><%= link_to "注册",signup_path %></li>
+			<% end %>
 		</ul>
 	</nav>
 </header>

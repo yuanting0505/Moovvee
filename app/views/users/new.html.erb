@@ -1,3 +1,4 @@
+<%= provide(:title,"注册") %>
 <div id="signup_page">
 	<%= form_for(@user) do |f| %>
 		<%= render 'shared/error_messages' %>
@@ -13,7 +14,9 @@
 		<%= f.label :password_confirmation,'确认密码:' %>
 		<%= f.password_field :password_confirmation,placeholder:"请再次输入密码" %>
 
+
 		<%= f.submit "注册", class: "btn btn-lg btn-primary " %>
+		<label id="to_signin_label">已有账号?那就愉快地<%= link_to"登陆",signin_path,:id=>'to_signin' %>吧！</label>
 
 	<% end %>
 </div>

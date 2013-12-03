@@ -1,5 +1,6 @@
-<%= provide(:title,"注册") %>
-<div id="signup_page">
+<%= provide(:title,"#{@user[:name]}的账号") %>
+<div id="edit_user_page">
+	<h1>更新您的信息</h1>
 	<%= form_for(@user) do |f| %>
 		<%= render 'shared/error_messages' %>
 		<%= f.label :email,'邮箱:' %>
@@ -9,14 +10,13 @@
 		<%= f.text_field :name,placeholder:"请输入您的用户名"%>
 
 		<%= f.label :password,'密码:' %>
-		<%= f.password_field :password,placeholder:"请输入密码" %>
+		<%= f.password_field :password,placeholder:"请输入新的密码" %>
 
 		<%= f.label :password_confirmation,'确认密码:' %>
 		<%= f.password_field :password_confirmation,placeholder:"请再次输入密码" %>
 
 
-		<%= f.submit "注册", class: "btn btn-lg btn-primary " %>
-		<label id="to_signin_label">已有账号?那就愉快地<%= link_to"登陆",signin_path,:id=>'to_signin' %>吧！</label>
+		<%= f.submit "更新账户", class: "btn btn-lg btn-primary " %>
 
 	<% end %>
 </div>

@@ -2,13 +2,14 @@
 	<%= link_to image_tag("logo.png",alt:"Moovvee",id:"logo"),'#'%>
 	<nav id="header_nav">
 		<ul id="nav">
-			<li class='fl-li'><%= link_to "主页",root_path %></li>
+			<li class='fl-li'><%= link_to "首页",root_path %></li>
+			<li class='fl-li'><%= link_to "个人主页",current_user %></li>
 			<% if signed_in? %>
 				 <li id="fat-menu" class="dropdown fl-li">
 				 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">账号<b class="caret"></b>
 				 	</a>
 				 	<ul class="dropdown-menu pull-right" id="header_dropdown">
-					 	<li><%= link_to "个人信息",current_user %></li>
+					 	<li><%= link_to "账户信息",edit_user_path%></li>
 					 	<li><%= link_to "退出", signout_path, method:"delete"%></li>
 				    </ul>
 				 </li>

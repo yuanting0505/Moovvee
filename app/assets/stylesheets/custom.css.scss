@@ -1,6 +1,7 @@
 body{
 	font-family: "Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti;
     background-color: #3F4652;
+    background-image: url('bg.png');
 }
 header{
 	background-image: url("header_bg.png");
@@ -102,28 +103,27 @@ form#new_user,form#signin_form{
   }
 }
 
-div#signup_page{
+/*div#signup_page{
 	height:100vh;
 	background-color: #3F4652; 
 	background-image: url('bg.png');
 	padding-top:50px;
 	padding-bottom: 50px;
 }
-
+*/
 div#signin_page{
     padding-top:50px;
     padding-bottom: 50px;  
 }
 
-div#container{
+div.container{
     padding-top: 80px;
     h1{
         color:#FFFFFF;
-        margin:50px;
+        margin-bottom: 30px;
     }
     h2,h3{
         color:#FFFFFF;
-        margin-left: 50px; 
         a{
            color:#33CC99;
            &:hover{

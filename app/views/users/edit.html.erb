@@ -2,10 +2,10 @@
 <div id="edit_user_page">
 	<h1>更新您的信息</h1>
 	<div class="row">
-	  <div class="col-md-4">
+	  <div class="span4">
 	  	<%=link_to gravatar_for(@user),'http://en.gravatar.com/emails/',:title=>'点击更改头像'%>
 	  </div>
-	  <div class="col-md-8">
+	  <div class="span8">
 	  	<%= form_for(@user) do |f| %>
 	  		<%= render 'shared/error_messages' %>
 

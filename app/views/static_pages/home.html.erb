@@ -1,3 +1,7 @@
+ <%= provide(:title,'Moovvee') %>
 <h1>欢迎来到Moovvee！</h1>
+<% if !signed_in? %>
 <h2>让我们愉快地<%= link_to "登陆",signin_path %>吧！</h2>
 <h3>没有账号？赶紧<%= link_to "注册",signup_path %>!</h3>
+<% else %>
+<% end %>

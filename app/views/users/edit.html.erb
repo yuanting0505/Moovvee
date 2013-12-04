@@ -1,22 +1,30 @@
 <%= provide(:title,"#{@user[:name]}的账号") %>
 <div id="edit_user_page">
 	<h1>更新您的信息</h1>
-	<%= form_for(@user) do |f| %>
-		<%= render 'shared/error_messages' %>
-		<%= f.label :email,'邮箱:' %>
-		<%= f.email_field :email,placeholder:"请输入您的邮箱"%>
+	<div class="row">
+	  <div class="col-md-4">
+	  	<%=link_to gravatar_for(@user),'http://en.gravatar.com/emails/',:title=>'点击更改头像'%>
+	  </div>
+	  <div class="col-md-8">
+	  	<%= form_for(@user) do |f| %>
+	  		<%= render 'shared/error_messages' %>
 
-		<%= f.label :name,'用户名:' %>
-		<%= f.text_field :name,placeholder:"请输入您的用户名"%>
+	  		<%= f.label :email,'邮箱:' %>
+	  		<%= f.email_field :email,placeholder:"请输入您的邮箱"%>
 
-		<%= f.label :password,'密码:' %>
-		<%= f.password_field :password,placeholder:"请输入新的密码" %>
+	  		<%= f.label :name,'用户名:' %>
+	  		<%= f.text_field :name,placeholder:"请输入您的用户名"%>
 
-		<%= f.label :password_confirmation,'确认密码:' %>
-		<%= f.password_field :password_confirmation,placeholder:"请再次输入密码" %>
+	  		<%= f.label :password,'密码:' %>
+	  		<%= f.password_field :password,placeholder:"请输入新的密码" %>
+
+	  		<%= f.label :password_confirmation,'确认密码:' %>
+	  		<%= f.password_field :password_confirmation,placeholder:"请再次输入密码" %>
 
 
-		<%= f.submit "更新账户", class: "btn btn-lg btn-primary " %>
+	  		<%= f.submit "更新账户", class: "btn btn-lg btn-primary " %>
 
-	<% end %>
+	  	<% end %>
+	  </div>
+	</div>
 </div>

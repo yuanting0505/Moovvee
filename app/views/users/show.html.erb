@@ -1,3 +1,19 @@
 <% flash.each do |key,value| %>
 <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
+
+<div id="edit_user_page" class="row"> <!-- 没必要分成两个 div 嵌套起来 -->
+    <div class="col-xs-12">           <!-- 这里放标题，独占宽度 -->
+        <h1 class="page-header">编辑资料</h1>
+    </div>
+    
+    <div class="col-xs-12 col-sm-4">
+        照片这里
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+        <button class='btn btn-lg btn-primary'>点我点我</button>
+    </div>
+    
+</div>
+

@@ -15,5 +15,6 @@
         <%= f.label :remember,"记住密码",:id=>'remember_label' %>
 
 		<%= f.submit "登陆", class: "btn btn-lg btn-primary " %>
+		<label id="to_signup_label">还没账号?那就辛苦一下,先<%= link_to"注册",signup_path,:id=>'to_signup' %>吧！</label>
 	<% end %>
 </div>

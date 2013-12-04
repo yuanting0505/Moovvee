@@ -11,4 +11,15 @@ form#signin_form{
         display: inline;
         font-size:15px;
     }
+    label#to_signup_label{
+    	float:right;
+    	font-size:14px;
+    	margin-top:5px;
+    }
+    a#to_signup{
+    	color:#33CC99;
+    	&:hover{
+    	 color:#00cc66;
+    	}
+    }
 }
